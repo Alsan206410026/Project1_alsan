@@ -1,0 +1,818 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f6f8f0;
+    font-family: 'Georgia', serif;
+    z-index: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.front{
+    background-image: url(photo/background/panitarmain.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 104vh;
+    background-size: cover;
+    font-family: 'Georgia', serif;
+    z-index: 2;
+}
+
+/* Navbar Layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 138px;
+  padding: 0 20px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+/* Left: Logo and Hamburger */
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.logo img {
+  position: absolute;
+  height: 247px;
+  top: -48px;
+}
+
+
+
+/* Toggle Button (Hidden on Desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #2d572c;
+}
+
+/* Center Nav */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 auto; /* prevents it from stretching and overlapping */
+  flex-wrap: wrap; /* allows wrap on smaller widths */
+}
+
+
+.nav-links li a {
+  color: rgb(3, 60, 3);
+  text-decoration: none;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 5px 8px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: rgb(43, 153, 35);
+}
+
+.home a::after,
+.aboutus a::after,
+.product a::after,
+.contact a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  transition: width 0.4s ease-in-out;
+}
+
+.home a:hover::after,
+.aboutus a:hover::after,
+.product a:hover::after,
+.contact a:hover::after {
+  width: 100%;
+}
+
+/* Right: Login + Search */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-btn {
+  background-color: yellow;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #2d572c;
+  border-radius: 25px;
+  padding: 5px 12px;
+  height: 38px;
+  transition: border-color 0.3s ease;
+}
+
+.search-form input[type="text"] {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  background: transparent;
+  color: #2d572c;
+  width: 160px;
+}
+
+.search-form input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+/* Hover and focus effects */
+.search-form:hover,
+.search-form:focus-within {
+  border-color: #43a047; /* brighter green */
+  box-shadow: 0 0 8px rgba(67, 160, 71, 0.3);
+}
+
+.search-form input[type="text"]:focus {
+  outline: none;
+  color: #2d572c;
+}
+
+/* Search highlighting and animations */
+.product-card {
+  transition: all 0.3s ease;
+}
+
+.product-card.search-highlight {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.2);
+}
+
+
+.title {
+  position: relative;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+  background: transparent;
+}
+.fontbox {
+  max-width: 820px;
+  height: 30vh;
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ overflow: hidden;
+  gap: 1rem;
+  z-index: 2;
+  border-radius: 45px;
+}
+.title h1 {
+  
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white
+}
+
+.message {
+  color: white;
+  padding: 0.8rem 1rem;
+  font-weight: 4;
+  border-radius: 5px;
+  font-size: 19px;
+  display: inline-block;
+  line-height: 1.6;
+  margin-bottom: 1em;
+ 
+}
+.btn {
+  background: #d4a373;
+   color: rgb(3, 60, 3);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #b07548;
+}
+
+ .about-section {
+  background: linear-gradient(to bottom right, #f3efe7, #e9f3e4);
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.text-box {
+  flex: 1 1 500px;
+}
+
+.text-box h2 {
+  font-size: 2.5rem;
+  color: #305030;
+  margin-bottom: 1rem;
+}
+
+.text-box h3 {
+  font-size: 2rem;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.text-box p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.about-btn {
+  display: inline-block;
+  background-color: #e5a168;
+  color: white;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.about-btn:hover {
+  background-color: #c47f46;
+}
+
+.image-box {
+  flex: 1 1 400px;
+  text-align: right;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.decor{
+    display: flex;
+    justify-content: center;
+
+}
+
+.productss {
+  padding: 4rem 2rem;
+  background-color: #f8fbf7;
+  text-align: center;
+}
+
+.productss h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas:
+    "golden white oolong perl"
+    "black green rose hibiscus"
+    "lemon tulsi mint rhondodendron"
+    "chalomile churpi ghee noni"
+    "lolipop Aakabare redkiwi greenkiwi";
+  gap: 2rem;
+}
+
+/* ---- PRODUCT CARD ---- */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddeedd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+/* ---- PRODUCT IMAGE ---- */
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* ---- HIDDEN OVERLAY ON HOVER ---- */
+.product-info {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.product-card:hover .product-info {
+  bottom: 0;
+}
+
+/* ---- PRODUCT NAME ---- */
+.product-info p {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---- SHOW MORE BUTTON ---- */
+.show-more {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.show-more:hover {
+  background-color: #388e3c;
+}
+
+
+    .contact-section {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #f3efe4;
+      height: 90vh;
+    }
+
+    .contact-section h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #4e402a;
+    }
+
+    .contact-section p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .contact-box {
+      background-color: #fff;
+      border: 2px solid #d8cdb9;
+      padding: 25px 35px;
+      border-radius: 12px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s, background-color 0.3s;
+      min-width: 200px;
+    }
+
+    .contact-box:hover {
+      transform: scale(1.05);
+      background-color: #ece6d6;
+    }
+
+    .contact-box h3 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+      color: #2d261b;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      padding: 12px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #3b9141;
+    }
+
+    footer.footer {
+      background-color: #4e402a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .footer-links li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-links li a:hover {
+      text-decoration: underline;
+    }
+
+/* Dark Mode Toggle Button */
+.mode-toggle {
+    position: absolute;
+    top: 48px;
+    right: 340px;
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    z-index: 1002;
+}
+
+.mode-toggle:hover {
+  background-color: #388e3c;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-mode .front {
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(photo/background/panitarmain.jpg);
+}
+
+
+.dark-mode .nav-links li a {
+  color: #66bb6a;
+}
+
+.dark-mode .nav-links li a:hover {
+  color: #81c784;
+}
+
+
+.dark-mode .title h1 {
+  color: #66bb6a;
+}
+
+.dark-mode .message {
+  color: #cccccc;
+}
+
+.dark-mode .btn {
+  background: #66bb6a;
+  color: #1a1a1a;
+}
+
+.dark-mode .btn:hover {
+  background: #4caf50;
+}
+
+.dark-mode .about-section {
+  background: linear-gradient(to bottom right, #2a2a2a, #1a1a1a);
+}
+
+.dark-mode .about-content {
+  background: rgba(50, 50, 50, 0.8);
+  border: 1px solid #444;
+}
+
+.dark-mode .text-box h2 {
+  color: #66bb6a;
+}
+
+.dark-mode .text-box h3 {
+  color: #cccccc;
+}
+
+.dark-mode .text-box p {
+  color: #bbbbbb;
+}
+
+.dark-mode .about-btn {
+  background-color: #66bb6a;
+  color: #1a1a1a;
+}
+
+.dark-mode .about-btn:hover {
+  background-color: #4caf50;
+}
+
+.dark-mode .productss {
+  background-color: #2a2a2a;
+}
+
+.dark-mode .productss h2 {
+  color: #66bb6a;
+}
+
+.dark-mode .product-card {
+  background-color: #333333;
+  border: 1px solid #444;
+}
+
+.dark-mode .product-info {
+  background-color: rgba(50, 50, 50, 0.95);
+  color: #ffffff;
+}
+
+.dark-mode .show-more {
+  background-color: #66bb6a;
+  color: #1a1a1a;
+}
+
+.dark-mode .show-more:hover {
+  background-color: #4caf50;
+}
+
+.dark-mode .contact-section {
+  background-color: #2a2a2a;
+}
+
+.dark-mode .contact-section h2 {
+  color: #66bb6a;
+}
+
+.dark-mode .contact-section p {
+  color: #cccccc;
+}
+
+.dark-mode .contact-box {
+  background-color: #333333;
+  border: 2px solid #444;
+  color: #ffffff;
+}
+
+.dark-mode .contact-box:hover {
+  background-color: #444444;
+}
+
+.dark-mode .contact-box h3 {
+  color: #66bb6a;
+}
+
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  background-color: #333333;
+  border: 1px solid #555;
+  color: #ffffff;
+}
+
+.dark-mode .contact-form input::placeholder,
+.dark-mode .contact-form textarea::placeholder {
+  color: #aaaaaa;
+}
+
+.dark-mode .contact-form button {
+  background-color: #66bb6a;
+  color: #1a1a1a;
+}
+
+.dark-mode .contact-form button:hover {
+  background-color: #4caf50;
+}
+
+.dark-mode .footer {
+  background-color: #1a1a1a;
+  border-top: 1px solid #333;
+}
+
+.dark-mode .footer-links li a {
+  color: #66bb6a;
+}
+
+.dark-mode .search-form {
+  background-color: #333333;
+  border: 2px solid #66bb6a;
+}
+
+.dark-mode .search-form input[type="text"] {
+  background: transparent;
+  color: #ffffff;
+}
+
+.dark-mode .search-form input::placeholder {
+  color: #aaaaaa;
+}
+
+.dark-mode .login-btn {
+  background-color: #66bb6a;
+  color: #1a1a1a;
+}
+
+.dark-mode .mode-toggle {
+  background-color: #666;
+}
+
+.dark-mode .mode-toggle:hover {
+  background-color: #555;
+}
+/* Media Query for Mobile View */
+@media (max-width: 1200px) {
+  /* Show hamburger and move it to the left */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 2rem;
+    color: #2d572c;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* Mobile nav menu styling */
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 110px;
+    left: 20px;
+    background-color: #f6f8f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 70%;
+    max-width: 300px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+
+  .nav-links li a:hover {
+    background-color: #e8f5e8;
+  }
+
+  /* About Section Layout Fix */
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 2rem;
+  }
+
+  .image-box {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .image-box img {
+    max-width: 300px;
+  }
+
+  /* Adjust logo size for medium screens */
+  .logo img {
+    height: 180px;
+    top: -35px;
+  }
+
+  /* Stack login & search nicely on right */
+  .right-section {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Dark mode toggle position adjustment */
+  .mode-toggle {
+    top: 70px;
+    right: 20px;
+  }
+
+  /* Products section for tablets */
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    grid-template-areas: none;
+  }
+
+  /* Contact section for tablets */
+  .contact-buttons {
+    gap: 15px;
+  }
+
+  .contact-box {
+    min-width: 180px;
+  }
+}
+
+/* Dark mode mobile nav styling */
+.dark-mode .nav-links {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+}
+
+.dark-mode .nav-links li a:hover {
+  background-color: #333333;
+}
+

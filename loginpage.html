@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Nepal's Tea Trading</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="loginpage.css">
+</head>
+<body>
+    <div class="logo"><img src="photo/logo/logo.png"></div>
+   <div class="container" id="container">
+     <div class="form-container sign-up">
+        <form>
+            <h1>Create Account</h1>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="password">
+            <button>Sign up</button>
+        </form>
+     </div>
+     <div class="form-container sign-in">
+        <form id="signInForm">
+            <h1>Sign-in</h1>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <span>or use your email and password</span>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <a href="#">Forgot Your Password?</a>
+            <button type="submit" id="signInButton">Sign in</button>
+        </form>
+        
+     </div>
+     <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-left">
+            <h1>Welcome Back!</h1>
+            <p>We are happy to see you again. Please login to continue your tea journey with Nepal's Tea Trading.</p>
+            <button class="hidden" id="login">sign-in</button>
+        </div>
+        <div class="toggle-panel toggle-right">
+            <h1>Hello, Everyone!</h1>
+            <p>Sign up today and explore the finest teas from Nepal.</p>        
+            <button class="hidden" id="register">sign-up</button>
+        </div>
+       
+        </div>
+     </div>
+   </div> 
+    <a href="nepalsteatrading.html" class="back-link">&larr; Back to Home</a>
+   <script src="loginpage.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Details</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f8fbf7;
+      padding: 2rem;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #4caf50;
+      margin-bottom: 1rem;
+    }
+
+    img {
+      width: 350px;
+      max-width: 90%;
+      border-radius: 15px;
+      margin: 1.5rem auto;
+      display: block;
+    }
+
+    .description {
+      max-width: 800px;
+      margin: 1rem auto;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #444;
+      background-color: #ffffffcc;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .price {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      color: #2e7d32;
+    }
+
+    .buy-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #4caf50;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 1.5rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .buy-button:hover {
+      background-color: #388e3c;
+    }
+
+    .back-link {
+      margin-top: 2rem;
+      display: block;
+      color: #4caf50;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    /* Dark Mode Toggle Button */
+    .mode-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .mode-toggle:hover {
+      background-color: #388e3c;
+    }
+
+    /* Dark Mode Styles */
+    .dark-mode {
+      background-color: #1a1a1a;
+      color: #ffffff;
+    }
+
+    .dark-mode h1 {
+      color: #66bb6a;
+    }
+
+    .dark-mode .description {
+      background-color: #333333cc;
+      color: #ffffff;
+    }
+
+    .dark-mode .price {
+      color: #81c784;
+    }
+
+    .dark-mode .buy-button {
+      background-color: #66bb6a;
+    }
+
+    .dark-mode .buy-button:hover {
+      background-color: #4caf50;
+    }
+
+    .dark-mode .back-link {
+      color: #66bb6a;
+    }
+
+    .dark-mode .mode-toggle {
+      background-color: #666;
+    }
+
+    .dark-mode .mode-toggle:hover {
+      background-color: #555;
+    }
+
+    /* Mobile Responsive Design */
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+      }
+
+      img {
+        width: 300px;
+        max-width: 95%;
+        margin: 1rem auto;
+      }
+
+      .description {
+        max-width: 100%;
+        margin: 1rem 0;
+        font-size: 1.1rem;
+        padding: 1.2rem;
+      }
+
+      .price {
+        font-size: 1.2rem;
+        margin: 0.8rem 0;
+      }
+
+      .buy-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+      }
+
+      .back-link {
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        text-align: center;
+        display: block;
+      }
+
+      .mode-toggle {
+        top: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Extra small screens */
+    @media (max-width: 480px) {
+      body {
+        padding: 0.5rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      img {
+        width: 280px;
+        max-width: 90%;
+      }
+
+      .description {
+        font-size: 1rem;
+        padding: 1rem;
+        line-height: 1.6;
+      }
+
+      .price {
+        font-size: 1.1rem;
+      }
+
+      .buy-button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+      }
+
+      .mode-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 6px 10px;
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+  <h1 id="product-title">Loading Product...</h1>
+  <img id="product-image" src="" alt="Product Image" style="display: none;" />
+  <div class="description" id="product-description">Please wait while we load the product details...</div>
+  <div class="price" id="product-price"></div>
+  <a id="buy-button" class="buy-button" style="display: none;">Buy Now</a>
+  <a href="nepalsteatrading.html" class="back-link">&larr; Back to Gallery</a>
+
+  <script>
+    const url = new URLSearchParams(window.location.search);
+    const productId = url.get('id');
+
+    fetch('products.json')
+      .then(response => response.json())
+      .then(products => {
+        const product = products.find(item => item.id === productId);
+
+        if (product) {
+          document.getElementById('product-title').textContent = product.name;
+          document.getElementById('product-description').textContent = product.description;
+          document.getElementById('product-price').textContent = "Price: " + product.price;
+
+          const image = document.getElementById('product-image');
+          image.src = product.image;
+          image.alt = product.name;
+          image.style.display = 'block';
+
+          const buyButton = document.getElementById('buy-button');
+          buyButton.href = "loginpage.html?id=" + product.id;
+          buyButton.style.display = 'inline-block';
+        } else {
+          document.getElementById('product-title').textContent = "Product Not Found";
+          document.getElementById('product-description').textContent = "Sorry, we couldn't find that product.";
+        }
+      })
+      .catch(error => {
+        console.error("Error loading product data:", error);
+        document.getElementById('product-title').textContent = "Error";
+        document.getElementById('product-description').textContent = "There was a problem loading the product.";
+      });
+  </script>
+
+  <script>
+    // Dark Mode Toggle Function
+    function toggleDarkMode() {
+      const body = document.body;
+      const button = document.querySelector('.mode-toggle');
+      
+      body.classList.toggle('dark-mode');
+      
+      if (body.classList.contains('dark-mode')) {
+        button.innerHTML = '☀️ Light Mode';
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        button.innerHTML = '🌙 Dark Mode';
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    }
+
+    // Check for saved dark mode preference
+    document.addEventListener('DOMContentLoaded', function() {
+      const darkMode = localStorage.getItem('darkMode');
+      const button = document.querySelector('.mode-toggle');
+      
+      if (darkMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+        button.innerHTML = '☀️ Light Mode';
+      }
+    });
+  </script>
+</body>
+</html>

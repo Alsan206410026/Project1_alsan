@@ -1,0 +1,144 @@
+[
+  {
+    "id": "goldentea",
+    "name": "Golden Tea",
+    "description": "Golden Tea is a rare and luxurious variety cultivated in the high-altitude estates of Ilam, Nepal. Known for its distinctive golden-tipped leaves, this tea is handpicked during the first flush when the buds are young and full of flavor. The leaves are minimally oxidized and naturally dried to retain their delicate golden hue. This artisanal process brings out a light, floral aroma and smooth taste. The brew offers a mellow and soothing experience with subtle notes of honey and toasted nuts. Golden Tea is prized for its low caffeine content and high antioxidants, making it perfect for afternoon sipping. It represents the sophistication of Nepal’s tea heritage and is best served plain without milk or sugar to appreciate its subtlety. It's not just a beverage, but a symbol of elegance and refinement.\n\nThis tea is perfect for those who appreciate complexity in subtlety. It's not overpowering yet delivers layers of refined taste that evolve as it cools. The careful crafting process and limited seasonal availability make it a collector’s favorite. Whether you're hosting a guest or enjoying a quiet moment alone, Golden Tea elevates the occasion. It also supports sustainable farming practices and empowers small-scale farmers in Ilam. The tea pairs well with light biscuits or fruit-based desserts. Embrace the golden standard of tea craftsmanship with every cup.",
+    "image": "photo/product/goldentea.jpg",
+    "price": "Rs. 350 per 100g"
+  },
+  {
+    "id": "whitetea",
+    "name": "White Tea",
+    "description": "White Tea is among the least processed teas and is considered a delicacy worldwide. In the mist-covered hills of Nepal, young tea buds are handpicked early in the morning and laid out to wither under the soft sun. This gentle, natural drying process helps the tea retain its natural antioxidants and fresh essence. The flavor is incredibly subtle, offering sweet and floral notes with almost no bitterness. Its silvery appearance and lightweight texture are hallmarks of high-grade white tea, making it a prized choice for connoisseurs.\n\nWhite Tea supports skin health, immunity, and mental clarity. It’s often recommended for detox routines due to its light composition and high polyphenol content. Unlike other teas, white tea is best brewed at lower temperatures to preserve its gentle notes. It’s a great companion during meditative moments or as an evening wind-down drink. Each sip provides a smooth, calming sensation that balances both mind and body. Whether enjoyed hot or cold, white tea from Nepal is a pure, refreshing experience.",
+    "image": "photo/product/whitetea.jpeg",
+    "price": "Rs. 400 per 100g"
+  },
+  {
+    "id": "blacktea",
+    "name": "Black Tea",
+    "description": "Nepali Black Tea is bold, brisk, and full-bodied, ideal for those who enjoy a strong cup. The tea leaves are fully oxidized through a traditional process that includes withering, rolling, fermentation, and drying. This sequence intensifies the flavor and gives the leaves a rich, dark hue. Known for its malty taste and amber-colored liquor, black tea pairs well with milk or can be enjoyed straight. It’s an excellent choice for a morning energy boost or as a companion during long work hours.\n\nBeyond its flavor, black tea from Nepal carries deep cultural significance. It's often shared among friends and family, forming the backbone of social rituals. The caffeine content helps improve focus and alertness, while antioxidants support heart health. It is grown in the mid-hill regions where climate and soil create the perfect environment for strong, aromatic leaves. The slightly fruity undertones make each cup memorable. Nepali black tea offers tradition, strength, and taste—all in one infusion.",
+    "image": "photo/product/blackteaa.jpg",
+    "price": "Rs. 280 per 100g"
+  },
+  {
+    "id": "greentea",
+    "name": "Green Tea",
+    "description": "Nepali Green Tea is a refreshing and health-packed beverage, produced with minimal oxidation to preserve its nutrients. Fresh tea leaves are immediately steamed or pan-fired after picking, locking in a crisp, grassy aroma and flavor. With a light golden-green hue, this tea is high in catechins and other antioxidants known to boost metabolism, improve digestion, and reduce stress. It delivers a slightly astringent taste that mellows beautifully with honey or lemon.\n\nThis green tea is grown organically in Nepal’s cooler hill regions. It’s favored by those on wellness journeys, and each brew brings clarity and focus. Ideal as a daily detox beverage, it can be served hot or iced depending on the mood. The refreshing quality of green tea also aids in mental sharpness and calm. Its cultivation supports sustainable practices and smallholder farmers. If you seek a natural, clean energy source, this is your go-to cup.",
+    "image": "photo/product/greentea",
+    "price": "Rs. 300 per 100g"
+  },
+  {
+    "id": "oolongtea",
+    "name": "Oolong Tea",
+    "description": "Oolong Tea is a semi-oxidized tea that bridges the gap between black and green tea, offering complexity and depth in every sip. Produced using time-honored techniques, the leaves are carefully withered, partially oxidized, and then twisted or rolled to release intricate flavors. Grown in Nepal’s highlands, this tea carries floral and fruity notes with a smooth, nutty finish. It is cherished for its dynamic aroma and changing flavor with each infusion.\n\nOolong tea promotes digestion, regulates cholesterol, and balances metabolism. It's often enjoyed in high-end tea ceremonies and can be steeped multiple times for a layered experience. Each brew reveals new aromas and characteristics, making it a tea you can revisit. Oolong’s mild caffeine content makes it perfect for daytime enjoyment. It’s the connoisseur’s choice for flavor depth and wellness benefits. The craftsmanship behind every leaf reflects Nepal’s growing specialty tea culture.",
+    "image": "photo/product/Oolong-Tea.webp",
+    "price": "Rs. 450 per 100g"
+  },
+  {
+    "id": "perlgreentea",
+    "name": "Perl Green Tea",
+    "description": "Perl Green Tea is a visually unique and flavorful variety made by rolling tender green leaves into tight, pearl-like balls. When steeped, these pearls unfurl gracefully, releasing their aroma and complex flavor gradually. Grown in organic farms in Nepal, the tea has a deep vegetal base with hints of jasmine and spring blossoms. The production process involves careful hand-rolling to preserve the integrity of each leaf.\n\nThis tea is not only beautiful but also packed with health benefits. It’s rich in antioxidants, boosts metabolism, and enhances hydration. Ideal for transparent teapots, it makes for a dramatic brewing experience. The slow unfurling adds a visual charm to tea sessions. It suits those who love green tea but seek something a bit more refined. Perl Green Tea is a fusion of tradition, artistry, and wellness.",
+    "image": "photo/product/perlgreen.png",
+    "price": "Rs. 320 per 100g"
+  },
+   {
+    "id": "rosetea",
+    "name": "Rose Tea (Herbal)",
+    "description": "Rose Tea is an herbal infusion made from sun-dried rose petals, known for its floral aroma and calming properties. Grown in carefully managed gardens, the roses are harvested early in the day when their fragrance is strongest. Once dried, the petals retain their color and essential oils, making this tea both visually beautiful and aromatic. The light pink brew offers a delicate taste and soothing mouthfeel, perfect for moments of relaxation or as an after-dinner drink. It pairs wonderfully with honey and is naturally caffeine-free.\n\nDrinking rose tea regularly is associated with benefits such as improved digestion, reduced menstrual discomfort, and a balanced mood. The fragrance alone is often used in aromatherapy to reduce stress and anxiety. This tea is ideal for people seeking a gentle yet therapeutic beverage. It can be served warm to promote inner calm or cold as a floral summer cooler. Whether for its health benefits or its subtle elegance, rose tea embodies self-care in a cup.",
+    "image": "photo/product/rosetea.png",
+    "price": "Rs. 300 per 100g"
+  },
+  {
+    "id": "hibiscustea",
+    "name": "Hibiscus Tea (Herbal)",
+    "description": "Hibiscus Tea is a vibrant, ruby-red herbal tea made from dried hibiscus petals. It’s tangy, slightly tart, and packed with Vitamin C and antioxidants. Traditionally used in various cultures as a cooling drink, it is especially popular in tropical and subtropical climates. In Nepal, hibiscus grows abundantly and is harvested for both its beauty and its medicinal properties. The tea is known to help regulate blood pressure and improve heart health. Its vivid color and citrusy flavor make it a favorite for iced tea blends and summer coolers.\n\nA splash of honey or lemon enhances its natural zing, turning it into a refreshing health elixir. Hibiscus Tea is caffeine-free, making it a great choice at any time of day. It is believed to support liver function, aid digestion, and reduce fatigue. The bold flavor and eye-catching color also make it a hit at social gatherings. Whether taken hot or cold, hibiscus tea is bold, refreshing, and good for your heart.",
+    "image": "photo/product/hibiscus.jpeg",
+    "price": "Rs. 300 per 100g"
+  },
+  {
+    "id": "lemongrasstea",
+    "name": "Lemon Grass Tea (Herbal)",
+    "description": "Lemongrass Tea is an invigorating herbal tea brewed from the stalks of lemongrass grown in Nepal’s fertile Terai region. The stalks are dried and cut, preserving their citrusy aroma and antimicrobial properties. This tea is a popular home remedy for indigestion, bloating, and flu-like symptoms. Its flavor is clean and lemony, with a hint of spice that soothes the throat and stomach. Lemongrass tea is ideal after meals or during detox routines.\n\nThe calming aroma makes it excellent for both wellness and aromatherapy. Lemongrass has natural stress-relieving qualities, making this tea a perfect choice for evening relaxation. It can be brewed alone or paired with ginger or mint for added benefits. Being caffeine-free, it fits well into daily wellness practices. The zesty profile and holistic advantages of this tea make it a staple in many health-conscious homes.",
+    "image": "photo/product/lemon.webp",
+    "price": "Rs. 280 per 100g"
+  },
+  {
+    "id": "tulsitea",
+    "name": "Tulsi Tea (Herbal)",
+    "description": "Tulsi Tea, also known as Holy Basil Tea, holds a sacred place in Nepali culture and Ayurveda. The leaves of the tulsi plant are sun-dried and brewed to make a tea that is both therapeutic and aromatic. Known for its adaptogenic qualities, tulsi helps the body cope with stress and boosts immunity. Its taste is slightly peppery with hints of clove and mint. Tulsi tea is especially recommended during flu season for respiratory support.\n\nIt also promotes mental clarity and emotional well-being. Drinking tulsi tea is more than a health practice—it’s a spiritual ritual rooted in centuries of Himalayan healing traditions. This caffeine-free infusion is perfect for daily balance and is often used as a natural remedy for coughs and colds. Whether you’re seeking tranquility or holistic health, tulsi tea is your sacred cup of care.",
+    "image": "photo/product/tulsi.webp",
+    "price": "Rs. 300 per 100g"
+  },
+  {
+    "id": "pepperminttea",
+    "name": "Peppermint Tea (Herbal)",
+    "description": "Peppermint Tea is a refreshing, aromatic infusion made from dried peppermint leaves. Known for its cooling and soothing qualities, it's a popular herbal remedy for digestive discomfort, bloating, and headaches. The menthol in peppermint acts as a natural muscle relaxant, making it perfect for winding down after a long day. Grown in Nepal’s mid-hills, the peppermint used in this tea is organic and hand-harvested to retain its maximum potency.\n\nThe tea has a crisp, minty flavor that leaves a clean aftertaste. It is caffeine-free and excellent both hot and iced. Peppermint tea also supports sinus relief and fresh breath. It is often taken after meals for improved digestion or before bed for relaxation. The invigorating properties make it a favorite among herbal tea lovers. For a cup of pure refreshment and balance, peppermint tea is an excellent choice.",
+    "image": "photo/product/Peppermint.jpg",
+    "price": "Rs. 280 per 100g"
+  },
+  {
+    "id": "rhododendrontea",
+    "name": "Rhododendron Tea (Herbal)",
+    "description": "Rhododendron Tea is a unique herbal brew made from the petals of Nepal’s national flower, found in high-altitude forests. The petals are collected during the bloom season and dried carefully to preserve their therapeutic properties. Known for its soothing effects, this tea is commonly used in traditional medicine to reduce inflammation and improve circulation. It has a delicate floral aroma with a slightly tart flavor, often sweetened with honey for added balance.\n\nRhododendron tea is caffeine-free and rich in polyphenols and essential oils. It’s also said to support respiratory health and boost immunity. The cultural significance of this tea makes it more than just a drink—it’s a celebration of Nepal’s biodiversity. Its gentle, calming effects make it a great evening brew. Whether served to guests or enjoyed alone, it reflects purity and connection to Himalayan roots.",
+    "image": "photo/product/rhondodendron.jpg",
+    "price": "Rs. 300 per 100g"
+  },
+  {
+    "id": "chamomiletea",
+    "name": "Chamomile Tea (Herbal)",
+    "description": "Chamomile Tea is a gentle, calming herbal infusion made from dried chamomile flowers, ideal for promoting relaxation and restful sleep. Grown in the cool climates of Nepal’s mountainous regions, the flowers are harvested and air-dried to preserve their natural oils and delicate fragrance. This tea has been used for centuries in natural medicine to reduce anxiety, ease digestion, and soothe headaches.\n\nThe taste is smooth with a mild apple-like sweetness. Chamomile tea is caffeine-free, making it perfect for evening routines. Often consumed with honey, it's popular for its calming properties and is recommended for those experiencing stress or insomnia. A warm cup is like a cozy blanket for your senses—comforting, nurturing, and peaceful. Chamomile embodies nature’s gentlest remedy in a floral cup.",
+    "image": "photo/product/chalomile.jpg",
+    "price": "Rs. 350 per 100g"
+  },
+  {
+    "id": "churpi",
+    "name": "Ilam Churpi",
+    "description": "Churpi is a traditional Nepali hard cheese made from the milk of yaks or cows, particularly in the Ilam and Himalayan regions. This protein-rich snack is well-known for its extremely chewy texture, often lasting for hours when consumed slowly. Churpi is made by curdling milk, straining it, and drying it naturally in the sun or smoke. It is highly durable and nutrient-dense, making it a perfect companion for long treks or outdoor adventures.\n\nIt can be eaten directly as a snack or cooked in traditional dishes. Often used as a natural chew for dogs in the West, churpi remains an iconic food staple in Nepalese households. Its toughness and rich dairy flavor make it unlike any other snack. It’s more than a food item—it's a piece of Nepali heritage that sustains both people and pets.",
+    "image": "photo/product/churpi.jpg",
+    "price": "Rs. 200 per piece"
+  },
+  {
+    "id": "ghee",
+    "name": "Ghee",
+    "description": "Ghee is a traditional clarified butter made from pure cow’s milk fat, used widely in Nepali cuisine and religious rituals. Its preparation involves simmering butter to remove water content and milk solids, leaving behind a golden liquid with a rich, nutty aroma. Ghee is considered sacred and is a staple in Ayurvedic health practices. It is rich in healthy fats, fat-soluble vitamins (A, D, E, K), and supports digestion by stimulating bile secretion.\n\nGhee is used in cooking, frying, and even medicinal applications for healing wounds or improving memory. Its high smoke point and unique taste make it a superior alternative to regular oil or butter. In many Nepali households, ghee holds cultural value, often used in offerings, pujas, and traditional recipes. A jar of ghee reflects purity, tradition, and nourishment passed down through generations.",
+    "image": "photo/product/ghee.jpg",
+    "price": "Rs. 800 per 500ml"
+  },
+  {
+    "id": "nonighee",
+    "name": "Noni Ghee",
+    "description": "Noni Ghee is a health-boosting fusion of traditional clarified butter and fermented noni fruit, both celebrated in Ayurveda. Noni fruit, known for its detoxifying and immunity-boosting properties, is blended with ghee to create a powerhouse of nutrients. This unique combination supports energy, digestion, and cellular regeneration. It has a distinctive aroma and flavor, slightly bitter from the noni but balanced by the smooth richness of ghee.\n\nThis product is ideal for those pursuing holistic wellness and modern superfoods. It can be consumed on an empty stomach or used in cooking to reap its therapeutic benefits. Noni Ghee bridges ancient nutrition with modern vitality. Whether you're seeking gut health or a natural energy tonic, this blend delivers both taste and function in one spoonful.",
+    "image": "photo/product/noni.jpg",
+    "price": "Rs. 900 per 500ml"
+  },
+  {
+    "id": "lolipop",
+    "name": "Milk Stick Lollipop (Ilam Special)",
+    "description": "This Milk Stick Lollipop, locally known as 'Dudhko Lollypop', is a traditional Nepali sweet handcrafted in the scenic hills of Ilam. Unlike typical sugary candies, this lollipop is made from pure milk slowly simmered over wood fire until it thickens and caramelizes. The result is a rich, chewy, toffee-like candy that melts slowly in your mouth, releasing layers of deep, creamy sweetness. It's wrapped in vibrant red and blue paper and often sold near schools, village markets, or festivals.\n\nProduced in small batches using local dairy, the milk used is fresh and hormone-free. No artificial colors, preservatives, or additives are used—just pure milk, sugar, and love. It’s high in calcium and naturally shelf-stable due to its dryness. Aside from its taste, this lollipop also symbolizes rural Nepali craftsmanship and simplicity. Whether you're enjoying it for the first time or reliving your childhood, the Ilam Milk Stick Lollipop delivers an authentic, wholesome experience.",
+    "image": "photo/product/lolipop.jpg",
+    "price": "Rs. 50"
+  },
+  {
+    "id": "aakabare",
+    "name": "Aakabare",
+    "description": "Aakabare Khursani, also known as Dalle Khursani, is one of the spiciest chilies native to the hills of Nepal. Small in size but fiery in flavor, these round red chilies are hand-harvested, sun-dried, and preserved traditionally. It is a staple in Nepali kitchens and a must-have for spice lovers. Aakabare is used in pickles, chutneys, and directly in curries to add heat and depth.\n\nRich in capsaicin and Vitamin C, it also has medicinal uses like improving circulation and fighting infections. Its intense spiciness is balanced by a fruity undertone. Whether dried, fresh, or pickled, this chili brings authentic heat to every Nepali meal. It’s not just a seasoning—it’s a bold statement of Nepali flavor and heritage.",
+    "image": "photo/product/spices.jpeg",
+    "price": "Rs. 150 per 100g"
+  },
+  {
+    "id": "redkiwi",
+    "name": "Red Kiwi",
+    "description": "Red Kiwi is a rare and exquisite fruit grown in the cool, fertile hills of Nepal. Unlike the common green kiwi, the red variety has a vibrant reddish core and a sweeter, berry-like flavor. Rich in Vitamin C, potassium, and antioxidants, red kiwi supports immune health and skin rejuvenation. It is typically eaten raw, added to fruit salads, or blended into smoothies.\n\nThe fruit has a soft texture and a tropical sweetness that makes it a treat for all age groups. Due to its short harvesting season and delicate nature, red kiwi is often considered a premium fruit. Every bite offers nutrition, flavor, and a taste of Himalayan purity. This fruit is a symbol of agricultural innovation and healthful indulgence.",
+    "image": "photo/product/redkiwi.jpg",
+    "price": "Rs. 120 per kg"
+  },
+  {
+    "id": "greenkiwi",
+    "name": "Green Kiwi",
+    "description": "Green Kiwi is a tangy, nutrient-rich fruit grown extensively in eastern Nepal’s temperate zones. It has a fuzzy brown exterior and a vibrant green interior filled with tiny edible seeds. The flavor is sweet and tart, with a juicy texture that is both refreshing and satisfying. Packed with Vitamin C, fiber, and enzymes like actinidin, green kiwi aids digestion and boosts immunity.\n\nIt’s perfect for breakfast bowls, desserts, or enjoyed on its own. Kiwis are also low in calories, making them an excellent snack for those watching their weight. Grown organically, this fruit symbolizes the growing diversity of Nepal’s agriculture and its ability to produce world-class produce. From orchard to table, each kiwi delivers freshness and wellness.",
+    "image": "photo/product/greenkiwi.jpg",
+    "price": "Rs. 100 per kg"
+  }
+]
+
+
