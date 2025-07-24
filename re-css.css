@@ -33,15 +33,17 @@ html {
   padding: 0 20px;
   flex-wrap: nowrap;
   overflow: hidden;
+  gap: 20px;
 }
 
-/* Left: Logo and Hamburger */
+/* Left: Logo */
 .left-section {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex: 0 0 auto;
+  min-width: fit-content;
 }
-
 
 .logo img {
   position: absolute;
@@ -49,25 +51,39 @@ html {
   top: -48px;
 }
 
+/* Center: Search Form (Desktop) */
+.navbar-center {
+  display: none; /* Hidden on desktop */
+}
 
-
-/* Toggle Button (Hidden on Desktop) */
+/* Right: Hamburger Menu */
 .menu-toggle {
   display: none;
   font-size: 2rem;
   cursor: pointer;
   color: #2d572c;
+  background: none;
+  border: none;
+  z-index: 5000;
+  flex: 0 0 auto;
 }
 
-/* Center Nav */
+/* Center Nav - Hidden on mobile */
 .nav-links {
   display: flex;
   list-style: none;
   gap: 25px;
   align-items: center;
   justify-content: center;
-  flex: 0 1 auto; /* prevents it from stretching and overlapping */
-  flex-wrap: wrap; /* allows wrap on smaller widths */
+  flex: 1;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile menu extras (hidden on desktop) */
+.mobile-menu-extras {
+  display: none;
 }
 
 
@@ -111,6 +127,8 @@ html {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex: 0 0 auto;
+  min-width: fit-content;
 }
 
 .login-btn {
@@ -305,7 +323,18 @@ html {
 .decor{
     display: flex;
     justify-content: center;
+}
 
+.leaf-decor {
+    width: 556px;
+    height: auto;
+    opacity: 0.7;
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+}
+
+.leaf-decor:hover {
+    transform: scale(1.1);
 }
 
 .productss {
@@ -321,14 +350,11 @@ html {
 
 .product-grid {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-areas:
-    "golden white oolong perl"
-    "black green rose hibiscus"
-    "lemon tulsi mint rhondodendron"
-    "chalomile churpi ghee noni"
-    "lolipop Aakabare redkiwi greenkiwi";
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* ---- PRODUCT CARD ---- */
@@ -508,7 +534,7 @@ html {
 .mode-toggle {
     position: absolute;
     top: 48px;
-    right: 340px;
+    right: 365px;
     padding: 10px 15px;
     background-color: #4caf50;
     color: white;
@@ -543,6 +569,7 @@ html {
 .dark-mode .nav-links li a:hover {
   color: #81c784;
 }
+
 
 
 .dark-mode .title h1 {
@@ -701,58 +728,74 @@ html {
 .dark-mode .mode-toggle:hover {
   background-color: #555;
 }
-/* Media Query for Mobile View */
+
+/* Dark mode mobile menu styles */
+
+
+.dark-mode .nav-links li a {
+  color: #66bb6a;
+  border-bottom: 1px solid #444;
+}
+
+.dark-mode .nav-links li a:hover {
+  background-color: #444444;
+}
+
+.dark-mode .mobile-menu-extras .search-form {
+  background-color: #333333;
+  border: 2px solid #66bb6a;
+}
+
+.dark-mode .mobile-menu-extras .search-form input[type="text"] {
+  color: #ffffff;
+}
+
+.dark-mode .mobile-menu-extras .search-form input::placeholder {
+  color: #aaaaaa;
+}
+
+.dark-mode .mobile-menu-extras .login-btn {
+  background-color: #66bb6a;
+  color: #1a1a1a;
+}
+
+.dark-mode .mobile-menu-extras .mode-toggle {
+  background-color: #666;
+  color: #ffffff;
+}
+
+.dark-mode .mobile-menu-extras {
+  border-top: 1px solid #444;
+}
+
+/* Media Query for Large Tablets and Medium Screens */
 @media (max-width: 1200px) {
-  /* Show hamburger and move it to the left */
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    font-size: 2rem;
-    color: #2d572c;
-    cursor: pointer;
-    z-index: 1001;
+  .navbar {
+    height: 110px;
+    padding: 0 20px;
   }
 
-  /* Mobile nav menu styling */
+  .logo img {
+    height: 220px;
+    top: -40px;
+  }
+
   .nav-links {
-    flex-direction: column;
-    position: absolute;
-    top: 110px;
-    left: 20px;
-    background-color: #f6f8f0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 1rem;
-    width: 70%;
-    max-width: 300px;
-    display: none;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin-bottom: 10px;
-    width: 100%;
+    gap: 20px;
   }
 
   .nav-links li a {
-    display: block;
-    padding: 12px 16px;
-    border-radius: 8px;
-    transition: background-color 0.3s;
+    font-size: 130%;
   }
 
-  .nav-links li a:hover {
-    background-color: #e8f5e8;
+  .right-section {
+    gap: 15px;
   }
 
-  /* About Section Layout Fix */
+  .search-form input[type="text"] {
+    width: 140px;
+  }
+
   .about-content {
     flex-direction: column;
     text-align: center;
@@ -765,39 +808,14 @@ html {
   }
 
   .image-box img {
-    max-width: 300px;
+    max-width: 350px;
   }
 
-  /* Adjust logo size for medium screens */
-  .logo img {
-    height: 180px;
-    top: -35px;
-  }
-
-  /* Stack login & search nicely on right */
-  .right-section {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  /* Dark mode toggle position adjustment */
-  .mode-toggle {
-    top: 70px;
-    right: 20px;
-  }
-
-  /* Products section for tablets */
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    grid-template-areas: none;
   }
 
-  /* Contact section for tablets */
   .contact-buttons {
     gap: 15px;
   }
@@ -805,31 +823,599 @@ html {
   .contact-box {
     min-width: 180px;
   }
+
+  .leaf-decor {
+    width: 485px;
+    margin: 0 15px;
+  }
 }
 
-@media (max-width: 768px) {
-  /* Adjust logo size for smaller screens */
-  .logo img {
-    height: 150px;
-    top: -20px;
-  }
-
-  /* Adjust navbar height */
+/* Media Query for Small Tablets */
+@media (max-width: 900px) {
   .navbar {
-    height: auto;
-    flex-direction: column;
-    align-items: flex-start;
+    height: 90px;
   }
 
-  /* Center nav links */
+  .logo img {
+    height: 170px;
+    top: -30px;
+  }
+
   .nav-links {
-    width: 100%;
-    justify-content: center;
-    padding: 10px 0;
+    gap: 15px;
   }
 
-  /* Adjust search form width */
+  .nav-links li a {
+    font-size: 120%;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
   .search-form input[type="text"] {
     width: 120px;
+  }
+
+  .leaf-decor {
+    width: 389px;
+    margin: 0 12px;
+  }
+}
+
+/* Mobile Responsive Layout */
+@media (max-width: 768px) {
+  /* Mobile Navbar */
+  .navbar {
+    height: 100px;
+    padding: 0 15px;
+    position: relative;
+    align-items: center;
+  }
+
+  /* Logo adjustments */
+  .left-section {
+    order: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 140px;
+    position: static;
+    top: 0;
+    margin: 0;
+  }
+
+  /* Show hamburger menu */
+  .menu-toggle {
+    display: block !important;
+    font-size: 1.8rem;
+    color: #2d572c;
+    cursor: pointer;
+    z-index: 5000;
+    margin-right: 10px;
+  }
+
+  /* Hide desktop navigation */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80vw;
+    max-width: 300px;
+    height: 100vh;
+    background: #f6f8f0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 20px 20px 20px;
+    z-index: 2000;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    margin: 0;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin-bottom: 15px;
+    list-style: none;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 15px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #e0e0e0;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links li a:hover {
+    background-color: #e8f5e8;
+    border-radius: 5px;
+  }
+
+  /* Adjust right section for mobile */
+  .right-section {
+    order: 3;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .right-section .search-form {
+    width: 110px;
+    height: 30px;
+    padding: 2px 6px;
+  }
+
+  .right-section .search-form input[type="text"] {
+    width: 80px;
+    font-size: 0.8rem;
+    padding: 2px 4px;
+  }
+
+  .right-section .login-btn {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+  }
+
+  .right-section .mode-toggle {
+    position: static;
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    border-radius: 12px;
+  }
+
+  /* Menu overlay */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 1999;
+    display: none;
+  }
+
+  .menu-overlay.active {
+    display: block;
+  }
+
+  /* About section - Image on top, text below */
+  .about-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .text-box {
+    flex: 1 1 auto;
+    order: 2;
+  }
+
+  .image-box {
+    flex: 1 1 auto;
+    order: 1;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .image-box img {
+    max-width: 100%;
+    width: 280px;
+  }
+
+  .leaf-decor {
+    width: 349px;
+    margin: 0 8px;
+    opacity: 0.6;
+  }
+
+  /* Dark mode mobile adjustments */
+  .dark-mode .nav-links {
+    background: #2a2a2a;
+    border-right: 1px solid #444;
+  }
+
+  .dark-mode .nav-links li a {
+    color: #66bb6a;
+    border-bottom: 1px solid #444;
+  }
+
+  .dark-mode .nav-links li a:hover {
+    background-color: #444444;
+  }
+
+  /* Title section adjustments */
+  .title {
+    height: 85vh;
+    padding: 0 15px;
+  }
+
+  .fontbox {
+    max-width: 95%;
+    height: auto;
+    min-height: 250px;
+    padding: 1.5rem;
+    margin: 0 auto;
+  }
+
+  .title h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+  }
+
+  .message {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  /* Products grid mobile */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 10px;
+  }
+
+  /* Contact section mobile */
+  .contact-section {
+    padding: 40px 15px;
+    height: auto;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .contact-box {
+    width: 100%;
+    max-width: 300px;
+    min-width: auto;
+  }
+
+  .contact-form {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+
+/* Extra small screens (phones in portrait) */
+@media (max-width: 480px) {
+  .navbar {
+    height: 90px;
+    padding: 0 10px;
+  }
+
+  .logo img {
+    height: 130px;
+  }
+
+      .right-section {
+        flex-direction: column;
+        position: absolute;
+        top: 4px;
+        gap: 2px;
+        align-items: flex-end;
+        right: 33px;
+    }
+
+  .right-section .search-form {
+    width: 90px;
+    height: 28px;
+  }
+
+  .right-section .search-form input[type="text"] {
+    width: 65px;
+    font-size: 0.75rem;
+  }
+
+  .right-section .login-btn {
+    padding: 4px 6px;
+    font-size: 0.75rem;
+  }
+
+  .right-section .mode-toggle {
+    padding: 4px 6px;
+    font-size: 0.7rem;
+  }
+
+  .fontbox {
+    padding: 1rem;
+    min-height: 200px;
+  }
+
+  .title h1 {
+    font-size: 1.4rem;
+  }
+
+  .message {
+    font-size: 13px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .about-content {
+    padding: 1rem;
+  }
+
+  .text-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .text-box h3 {
+    font-size: 1.4rem;
+  }
+
+  .text-box p {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    width: 90vw;
+  }
+
+  .contact-section {
+    padding: 30px 10px;
+  }
+
+  .leaf-decor {
+    width: 171px;
+    margin: 0 6px;
+    opacity: 0.5;
+  }
+}
+
+/* Very small screens (small phones in portrait - 360px and below) */
+@media (max-width: 360px) {
+  .navbar {
+    height: 80px;
+    padding: 0 8px;
+    gap: 8px;
+  }
+
+  .left-section {
+    gap: 6px;
+  }
+
+  .menu-toggle {
+    font-size: 1.2rem;
+    padding: 6px;
+    min-width: 30px;
+    height: 30px;
+  }
+
+  .logo img {
+    height: 110px;
+  }
+
+  .right-section {
+       flex-direction: column;
+        gap: 2px;
+        right: 41px;
+        position: absolute;
+        align-items: flex-end;
+        top: 5px;
+  }
+
+  .right-section .search-form {
+    width: 80px;
+    height: 24px;
+  }
+
+  .right-section .search-form input[type="text"] {
+    width: 55px;
+    font-size: 0.7rem;
+    padding: 2px 4px;
+  }
+
+  .right-section .login-btn {
+    padding: 3px 5px;
+    font-size: 0.7rem;
+  }
+
+  .right-section .mode-toggle {
+    padding: 3px 5px;
+    font-size: 0.65rem;
+  }
+
+  .fontbox {
+    padding: 0.8rem;
+    min-height: 180px;
+  }
+
+  .title h1 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  .message {
+    font-size: 12px;
+    margin: 8px 0;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .nav-links {
+    width: 95vw;
+    padding: 15px;
+  }
+
+  .nav-links li {
+    margin: 8px 0;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+
+  .about-content {
+    padding: 0.8rem;
+  }
+
+  .text-box h2 {
+    font-size: 1.6rem;
+  }
+
+  .text-box h3 {
+    font-size: 1.2rem;
+    margin: 8px 0;
+  }
+
+  .text-box p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .about-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .productss h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .product-grid {
+    gap: 0.8rem;
+    padding: 0 8px;
+  }
+
+  .product-card {
+    border-radius: 8px;
+  }
+
+  .product-info p {
+    font-size: 0.9rem;
+  }
+
+  .show-more {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .contact-section {
+    padding: 20px 8px;
+  }
+
+  .contact-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-section p {
+    font-size: 0.9rem;
+  }
+
+  .contact-buttons {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .contact-box {
+    padding: 12px;
+  }
+
+  .contact-box h3 {
+    font-size: 1rem;
+  }
+
+  .contact-box p {
+    font-size: 0.85rem;
+  }
+
+  .contact-form {
+    gap: 12px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    padding: 15px 8px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-content p {
+    font-size: 0.8rem;
+  }
+
+  .footer-links {
+    gap: 15px;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+  }
+
+  .leaf-decor {
+    width: 40px;
+    margin: 0 4px;
+    opacity: 0.4;
+  }
+}
+
+/* Large screens adjustments */
+@media (min-width: 1400px) {
+  .navbar {
+    padding: 0 50px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .about-content {
+    max-width: 1200px;
+  }
+
+  .contact-section {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }

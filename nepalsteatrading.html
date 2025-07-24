@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nepal's Tea Trading</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="re-css.css" >
 </head>
 <body>
-  <button class="mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+ 
  
 <section class="front">
 <header>
@@ -21,7 +22,7 @@
   </div>
 
   <!-- Center Nav Links -->
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li class="home"><a href="nepalsteatrading.html">Home</a></li>
     <li class="aboutus"><a href="#aboutpage">About Us</a></li>
     <li class="product"><a href="#products">Products</a></li>
@@ -30,6 +31,7 @@
 
   <!-- Right Login and Search -->
   <div class="right-section">
+     <button class="mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
     <form class="search-form" role="search">
       <input type="text" name="product" placeholder="🔍 Search For Product" autocomplete="off" title="Search products by name">
       <button type="submit" style="display: none;">Search</button>
@@ -283,6 +285,8 @@
     </div>
   </footer>
 
+<!-- Menu overlay for mobile -->
+<div class="menu-overlay" id="menu-overlay"></div>
 
  <script src="nepalsteatrading.js"></script>
 </body>

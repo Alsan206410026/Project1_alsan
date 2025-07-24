@@ -1,10 +1,52 @@
-
+// Hamburger Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
   const toggleButton = document.getElementById('menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  const navLinks = document.getElementById('nav-links');
+  const menuOverlay = document.getElementById('menu-overlay');
 
-  toggleButton.addEventListener('click', () => {
+  // Toggle menu function
+  function toggleMenu() {
     navLinks.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open
+    if (navLinks.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Close menu function
+  function closeMenu() {
+    navLinks.classList.remove('active');
+    menuOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Hamburger button click
+  if (toggleButton) {
+    toggleButton.addEventListener('click', toggleMenu);
+  }
+
+  // Overlay click to close menu
+  if (menuOverlay) {
+    menuOverlay.addEventListener('click', closeMenu);
+  }
+
+  // Close menu when clicking nav links
+  const navLinkItems = navLinks.querySelectorAll('li a');
+  navLinkItems.forEach(link => {
+    link.addEventListener('click', closeMenu);
   });
+
+  // Close menu on window resize if screen becomes large
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+      closeMenu();
+    }
+  });
+});
 
 // Dark Mode Toggle Function
 function toggleDarkMode() {
