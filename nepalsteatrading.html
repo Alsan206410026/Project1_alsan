@@ -1,59 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nepal's Tea Trading</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="re-css.css" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal's Tea Trading</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="nepalsteatrading.css" >
 </head>
+
 <body>
- 
- 
-<section class="front">
-<header>
- <nav class="navbar">
-  <!-- Left Logo and Hamburger -->
-  <div class="left-section">
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    <div class="logo">
-      <a href="nepalsteatrading.html"><img src="photo/logo/logoo.png" alt="Logo"></a>
+
+    <section class="front">
+    <header>
+    <!-- Left: Logo and Menu Toggle -->
+    <div class="left-header">
+         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <div><img src="photo/logo/logoo.png" alt="Nepal's Tea Trading" class="logo"></div>
     </div>
-  </div>
 
-  <!-- Center Nav Links -->
-  <ul class="nav-links" id="nav-links">
-    <li class="home"><a href="nepalsteatrading.html">Home</a></li>
-    <li class="aboutus"><a href="#aboutpage">About Us</a></li>
-    <li class="product"><a href="#products">Products</a></li>
-    <li class="contact"><a href="#contact">Contact</a></li>
-  </ul>
+    <!-- Middle: Navigation -->
+    <nav>
+      <a class="home" href="#home">Home</a>
+      <a class="aboutus" href="#aboutpage">About Us</a>
+      <a class="product" href="#products">Products</a>
+      <a class="contact" href="#contactpage">Contact</a>
+    </nav>
 
-  <!-- Right Login and Search -->
-  <div class="right-section">
-     <button class="mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
-    <form class="search-form" role="search">
-      <input type="text" name="product" placeholder="🔍 Search For Product" autocomplete="off" title="Search products by name">
-      <button type="submit" style="display: none;">Search</button>
+    <!-- Right: Dark/Light toggle and Login -->
+    <div class="right-buttons">
+      <button class="mode-toggle" onclick="toggleDarkMode()">🌙</button>
+      <form class="search-form" role="search">
+      <input type="text" name="product" placeholder="🔍 Products" autocomplete="off" title="Search products by name">
+      
     </form>
+      <a href="loginpage.html" class="login-btn">Login</a>
+    </div>
+  </header>
+  <div class="menu-overlay" id="menu-overlay"></div>
 
-    
-    <a href="loginpage.html" class="login-btn">Login</a>
-  </div>
-</nav>
-
-   
-
-</header>
-<main>
+  <main>
   <div class="title" id="home">
       <div class="fontbox">
         <h1>Welcome to Nepal's Tea Trading</h1>
         <p class="message">From the heart of Ilam to your cup – authentic, herbal, and handcrafted teas and more.</p>
         <a href="#products" class="btn">Explore Products</a>
       </div>
-    </div></main>
-  </section>
+    </div>
+  </main>
+</section>
+
 
 <section id="aboutpage" class="about-section">
   <div class="about-content">
@@ -246,7 +241,7 @@
   </div>
 </section>
 
- <section class="contact-section" id="contact">
+ <section class="contact-section" id="contactpage">
     <h2>Contact Us</h2>
     <p>Reach out through any of the ways below or send us a message directly.</p>
 
@@ -285,9 +280,6 @@
     </div>
   </footer>
 
-<!-- Menu overlay for mobile -->
-<div class="menu-overlay" id="menu-overlay"></div>
-
- <script src="nepalsteatrading.js"></script>
+<script src="nepalsteatrading.js"></script>
 </body>
 </html>

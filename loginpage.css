@@ -38,11 +38,13 @@ body {
     
   }
   .logo img {
-    max-height: 316px;
+    position: absolute;
+    top: -4px;
+    max-height: 306px;
     object-fit: contain;
     z-index: 9999;
     display: inline-block;
-  }
+}
 
   .container{
     background-color:#80e997;

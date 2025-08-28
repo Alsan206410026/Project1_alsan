@@ -228,33 +228,53 @@
   <a href="nepalsteatrading.html" class="back-link">&larr; Back to Gallery</a>
 
   <script>
+    // Get the URL parameters from the current page
+    // For example: if URL is "product-details.html?id=tea1", this extracts the query string "?id=tea1"
     const url = new URLSearchParams(window.location.search);
+    
+    // Extract the specific 'id' parameter from the URL
+    // This gets the product ID that was passed when user clicked on a product
     const productId = url.get('id');
 
+    // Fetch product data from the JSON file
+    // This loads all product information from the products.json file
     fetch('products.json')
-      .then(response => response.json())
-      .then(products => {
+      .then(response => response.json()) // Convert the response to JSON format
+      .then(products => { // Process the array of products
+        // Find the specific product that matches the ID from the URL
+        // This searches through all products to find the one with matching ID
         const product = products.find(item => item.id === productId);
 
+        // If the product is found, display its details on the page
         if (product) {
+          // Update the page title with the product name
           document.getElementById('product-title').textContent = product.name;
+          
+          // Update the description section with product description
           document.getElementById('product-description').textContent = product.description;
+          
+          // Update the price section with product price
           document.getElementById('product-price').textContent = "Price: " + product.price;
 
+          // Update the product image
           const image = document.getElementById('product-image');
-          image.src = product.image;
-          image.alt = product.name;
-          image.style.display = 'block';
+          image.src = product.image; // Set the image source
+          image.alt = product.name;  // Set alt text for accessibility
+          image.style.display = 'block'; // Make the image visible
 
+          // Configure the "Buy Now" button
           const buyButton = document.getElementById('buy-button');
-          buyButton.href = "loginpage.html?id=" + product.id;
-          buyButton.style.display = 'inline-block';
+          buyButton.href = "loginpage.html?id=" + product.id; // Set the link to login page with product ID
+          buyButton.style.display = 'inline-block'; // Make the button visible
         } else {
+          // If no product is found with the given ID, show error message
           document.getElementById('product-title').textContent = "Product Not Found";
           document.getElementById('product-description').textContent = "Sorry, we couldn't find that product.";
         }
       })
       .catch(error => {
+        // Handle any errors that occur during the fetch operation
+        // This runs if the JSON file can't be loaded or parsed
         console.error("Error loading product data:", error);
         document.getElementById('product-title').textContent = "Error";
         document.getElementById('product-description').textContent = "There was a problem loading the product.";
