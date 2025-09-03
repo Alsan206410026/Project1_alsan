@@ -136,14 +136,15 @@ nav a:hover::after {
   font-size: 20px;
   font-weight: bold;
   padding: 6px 18px;
-    border-radius: 12px;
-    border-width: 4px;
-    border-style: solid;
-    border-top-color: grey;
-    border-left-color: grey;
-    border-bottom-color: black;
-    border-right-color: black;
-    cursor: pointer;
+  border-radius: 12px;
+  border-width: 4px;
+  border-style: solid;
+  border-top-color: grey;
+  border-left-color: grey;
+  border-bottom-color: black;
+  border-right-color: black;
+  cursor: pointer;
+  z-index: 10000;
 }
 
     /* Hamburger menu for small screens */
@@ -202,7 +203,7 @@ nav a:hover::after {
 }
 .fontbox {
   max-width: 820px;
-  height: 30vh;
+  height: 35vh;
   backdrop-filter: blur(8px);
   border-radius: 10px;
   padding: 2em;
@@ -430,7 +431,7 @@ nav a:hover::after {
       padding: 60px 20px;
       text-align: center;
       background-color: #f3efe4;
-      height: 78vh;
+      height: 100vh;
     }
 
     .contact-section h2 {
@@ -962,10 +963,7 @@ body.dark-mode nav a:hover {
     top: 14px;
 }
 .contact-section {
-    height: 103vh;
+    height: 111vh;
 }
 
  }
-
-
-

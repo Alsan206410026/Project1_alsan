@@ -39,7 +39,7 @@ body {
   }
   .logo img {
     position: absolute;
-    top: -4px;
+    top: 100px;
     max-height: 306px;
     object-fit: contain;
     z-index: 9999;
@@ -514,7 +514,11 @@ height: 100%;
     }
 
     .logo img {
-      max-height: 100px;
+      max-height: 200px;
+      position: absolute;
+      top: 10px;
+      left:100px;
+      width: auto;
     }
 
 
@@ -523,8 +527,20 @@ height: 100%;
     }
 
     .container h1 {
-      font-size: 1.3rem;
+     position: relative;
+     top: 10px;
+     left: -15px;
+      font-size: 20px;
     }
+
+    .social-icons{
+       position: relative;
+     top: 10px;
+     left: -15px;
+    }
+  .txt p{
+    font-size: 15px;
+  }
 
     .container input {
       padding: 10px 12px;
@@ -532,7 +548,7 @@ height: 100%;
     }
 
     .container button {
-      padding: 10px 35px;
+      padding: 8px 35px;
       font-size: 13px;
     }
     .toggle-panel {
@@ -595,5 +611,26 @@ height: 100%;
       padding: 10px 25px;
       font-size: 13px;
     }
+    .container p{
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .container.active .toggle-panel p {
+        font-size: 11px;
+        line-height: 1.4;
+        position: relative;
+        right: 10px;
+        margin: 15px;
+        max-width: 90%;
+    }
+
+        .container button {
+        padding: 8px 35px;
+        font-size: 13px;
+        position: relative;
+        left: -15px;
+    }
+
   }
   
